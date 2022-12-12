@@ -2,7 +2,7 @@ function playSound(e) {
   const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
   //audio is a audio type element.
   const key = document.querySelector(`.key[data-key="${e.keyCode}"]`);
-  console.log(audio);
+  // console.log(audio);
   if (!audio) return; //stop the function from running all togather
   audio.currentTime = 0; //rewined to the start
   audio.play();
@@ -10,6 +10,9 @@ function playSound(e) {
   // if(key.classList.contains("playing")){
   //   key.classList.remove("playing");
   // }
+  document
+    .querySelectorAll(".key")
+    .forEach((key) => key.classList.remove("playing"));
   key.classList.add("playing");
   // setTimeout(function(){
   //     key.classList.remove("playing");
