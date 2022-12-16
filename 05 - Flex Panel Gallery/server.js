@@ -6,12 +6,12 @@ function toggleOpen() {
 
 function toggleAOpen(e) {
   console.log(e.propertyName);
-  if (e.propertyName.includes("felx")) {
-    this.classList.toggle("o");
+  if (e.propertyName.includes("flex")) {
+    this.classList.toggle("open-active");
   }
 }
 panelList.forEach((panel) => panel.addEventListener("click", toggleOpen));
-panelList.forEach((panel) => panel.addEventListener("hover", toggleOpen));
+// panelList.forEach((panel) => panel.addEventListener("hover", toggleOpen));
 panelList.forEach((panel) =>
   panel.addEventListener("transitionend", toggleAOpen)
 );
